@@ -11,6 +11,7 @@ hl.monitor({
 local terminal = "kitty"
 local menu     = "wofi --show drun"
 local files    = "nautilus"
+local drawer   = "nwg-drawer -term " .. terminal .. " -fm " .. files .. " -wm hyprland"
 local mod      = "SUPER"
 
 hl.env("XCURSOR_SIZE", "24")
@@ -25,7 +26,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("swaync")
     hl.exec_cmd("hypridle")
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
-    hl.exec_cmd("nwg-dock-hyprland -r -i 44 -mb 8 -x -c '" .. menu .. "'")
+    hl.exec_cmd("nwg-dock-hyprland -r -i 44 -mb 8 -x -c '" .. drawer .. "'")
     hl.exec_cmd("wl-paste --watch cliphist store")
 end)
 
@@ -96,11 +97,12 @@ hl.animation({ leaf = "fade",       enabled = true, speed = 4, bezier = "mac" })
 hl.animation({ leaf = "workspaces", enabled = true, speed = 5, bezier = "mac", style = "slide" })
 hl.animation({ leaf = "layers",     enabled = true, speed = 4, bezier = "mac", style = "fade" })
 
--- Flou derrière la barre, le dock, le lanceur et les notifs
+-- Flou derrière la barre, le dock, le tiroir d'apps, le lanceur et les notifs
 hl.layer_rule({ name = "blur-waybar", match = { namespace = "waybar" },                blur = true, ignore_alpha = 0 })
 hl.layer_rule({ name = "blur-wofi",   match = { namespace = "wofi" },                  blur = true })
 hl.layer_rule({ name = "blur-swaync", match = { namespace = "swaync-control-center" }, blur = true })
 hl.layer_rule({ name = "blur-dock",   match = { namespace = "nwg-dock" },              blur = true, ignore_alpha = 0 })
+hl.layer_rule({ name = "blur-drawer", match = { namespace = "nwg-drawer" },            blur = true })
 
 -- ── Raccourcis (inspirés de macOS : Super = ⌘) ───────────────────
 hl.bind(mod .. " + RETURN",    hl.dsp.exec_cmd(terminal))

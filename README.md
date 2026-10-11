@@ -1,6 +1,6 @@
 # hyprclaude-osx
 
-Rice Hyprland sobre façon macOS pour Arch Linux : barre en haut (waybar), dock (nwg-dock), lanceur façon Spotlight (wofi), centre de notifications (swaync), écran de verrouillage (hyprlock), flou et coins arrondis.
+Rice Hyprland sobre façon macOS pour Arch Linux : barre en haut (waybar), dock (nwg-dock) avec grille d'applications (nwg-drawer), lanceur façon Spotlight (wofi), centre de notifications (swaync), écran de verrouillage (hyprlock), flou et coins arrondis.
 
 La config Hyprland est écrite en **Lua** (`hyprland.lua`) : le format `hyprland.conf` est obsolète à partir de Hyprland 0.57. Il faut **Hyprland ≥ 0.56**.
 

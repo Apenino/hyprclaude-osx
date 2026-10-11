@@ -17,7 +17,7 @@ PACKAGES=(
   hyprland xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
   hyprpaper hyprlock hypridle hyprpolkitagent
   # Bureau
-  kitty waybar wofi swaync nwg-dock-hyprland nautilus
+  kitty waybar wofi swaync nwg-dock-hyprland nwg-drawer nautilus
   # Wayland / Qt
   qt5-wayland qt6-wayland
   # Capture, presse-papiers, matériel
