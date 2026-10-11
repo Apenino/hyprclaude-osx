@@ -1,0 +1,22 @@
+* { font-family: "Inter"; font-size: 15px; }
+window {
+  background-color: rgba(36, 36, 40, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+}
+#outer-box { padding: 12px; }
+#input {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  box-shadow: none;
+  font-size: 20px;
+  padding: 8px 10px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+}
+#scroll { margin-top: 8px; }
+#entry { padding: 6px 10px; border-radius: 8px; }
+#entry:selected { background-color: rgba(10, 132, 255, 0.85); }
+#text { color: #f0f0f2; margin-left: 8px; }
+#entry:selected #text { color: #ffffff; }

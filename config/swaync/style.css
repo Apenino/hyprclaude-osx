@@ -1,0 +1,7 @@
+* { font-family: "Inter"; }
+.control-center, .notification {
+  background: rgba(40, 40, 44, 0.75);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}

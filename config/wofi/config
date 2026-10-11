@@ -1,0 +1,11 @@
+width=620
+height=380
+location=center
+show=drun
+prompt=Recherche Spotlight
+allow_images=true
+image_size=28
+insensitive=true
+hide_scroll=true
+no_actions=true
+term=kitty

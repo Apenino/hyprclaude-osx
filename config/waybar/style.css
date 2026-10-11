@@ -1,0 +1,41 @@
+* {
+  font-family: "Inter", "JetBrainsMono Nerd Font";
+  font-size: 13px;
+  font-weight: 500;
+  min-height: 0;
+  border: none;
+}
+window#waybar {
+  background: rgba(30, 30, 34, 0.45);
+  color: #ffffff;
+}
+#custom-apple {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 16px;
+  padding: 0 14px 0 16px;
+}
+#window {
+  font-weight: 700;
+  padding: 0 10px;
+}
+#workspaces button {
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0 4px;
+  background: transparent;
+  box-shadow: none;
+}
+#workspaces button.active { color: #ffffff; }
+#workspaces button:hover { background: rgba(255, 255, 255, 0.12); border-radius: 6px; }
+#tray, #pulseaudio, #network, #battery, #clock, #custom-notif {
+  padding: 0 10px;
+}
+#pulseaudio, #network, #custom-notif {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 15px;
+}
+#custom-notif { padding-right: 16px; }
+tooltip {
+  background: rgba(40, 40, 44, 0.9);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
