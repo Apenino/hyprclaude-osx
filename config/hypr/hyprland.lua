@@ -25,7 +25,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("swaync")
     hl.exec_cmd("hypridle")
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
-    hl.exec_cmd("nwg-dock-hyprland -d -i 44 -mb 8 -x")
+    hl.exec_cmd("nwg-dock-hyprland -r -i 44 -mb 8 -x -c '" .. menu .. "'")
     hl.exec_cmd("wl-paste --watch cliphist store")
 end)
 

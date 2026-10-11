@@ -80,6 +80,13 @@ done < <(find "$REPO_DIR/config" -type f -print0)
 # Une ancienne hyprland.conf serait ignorée au profit de hyprland.lua : on la range.
 [[ -e $CONFIG_DIR/hypr/hyprland.conf ]] && backup "$CONFIG_DIR/hypr/hyprland.conf"
 
+# Apps épinglées du dock (seulement au premier lancement : l'utilisateur les modifie ensuite)
+PINNED="${XDG_CACHE_HOME:-$HOME/.cache}/nwg-dock-pinned"
+if [[ ! -e $PINNED ]]; then
+  mkdir -p "$(dirname "$PINNED")"
+  printf '%s\n' org.gnome.Nautilus kitty > "$PINNED"
+fi
+
 info "Copie des fonds d'écran"
 install -Dm644 -t "$CONFIG_DIR/hypr/wallpapers" "$REPO_DIR"/wallpapers/*
 
